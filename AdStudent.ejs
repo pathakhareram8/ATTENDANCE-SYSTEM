@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick class</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+
+body{
+    margin: auto;
+    width: 500px; 
+    padding: 200px;
+    font-family: 'Lexend Deca', sans-serif; 
+    color: #2E475D;  
+}
+
+* {
+    /* Change your font family */
+    font-family: sans-serif;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #5995fd;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #5995fd;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: rgba(189, 26, 26, 0.021);
+}
+
+
+/* =========================================================
+button 1*/
+
+button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 5px 5px;
+    border-radius: 50px;
+    background: #5995fd;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  button:hover {
+    background: #01d3e2;
+  }
+  
+  button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+
+  a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #5995fd;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.home-button:hover {
+  background-color: #ccc;
+}
+
+  
+    </style>
+</head>
+<body>
+    
+    <div>
+    <table class="content-table">
+       
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Semester</th>
+            <th>Branch</th>
+            <th>No.Student</th>
+            <th>Open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>First</td>
+            <td>C.S.E</td>
+            <td>19</td>
+            <td>
+              <button>
+                <span>Open</span>
+                <svg width="20" height="20" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width=""></circle>
+                    <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                </svg>
+            </button>
+
+            </td>
+            
+
+          </tr>
+          <tr >
+            <td>2</td>
+            <td>Second</td>
+            <td>C.S.E</td>
+            <td>12</td>
+            <td>
+              <button>
+                <span>Open</span>
+                <svg width="20" height="20" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width=""></circle>
+                    <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                </svg>
+            </button>
+
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Fourth</td>
+            <td>C.S.E</td>
+            <td>15</td>
+            <td>
+              <button>
+                <span>Open</span>
+                <svg width="20" height="20" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width=""></circle>
+                    <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                </svg>
+            </button>
+
+
+            </td>
+          </tr>
+          
+
+          <tr >
+            <td>2</td>
+            <td>Sixth</td>
+            <td>C.S.E</td>
+            <td>10</td>
+            <td>
+                <button onclick="location.href='/StudentDetail6Sem'" action="post">
+                    <span>Open</span>
+                    <svg width="20" height="20" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width=""></circle>
+                      <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                    </svg>
+                  </button>
+                  
+
+            </td>
+            
+
+          
+        </tbody>
+      </table>
+    </div>
+    <!-- <a href="#" class="previous">&laquo; Previous</a> -->
+<!-- <a href="#" class="next">home &raquo;</a> -->
+<a href="#" class="previous" onclick="history.go(-2)">&laquo; Home</a>
+
+
+ 
+<a href="#" class="previous" onclick="history.go(-1)">&laquo; Previous</a>
+<!-- <a href="#" class="previous round">&#8249;</a>
+<a href="#" class="next round">&#8250;</a> -->
+  
+   
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAstudent</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      /* CSS styles for the table and buttons */
+      body {
+          margin: auto;
+          width: 500px;
+          padding: 200px;
+          font-family: 'Lexend Deca', sans-serif;
+          color: #2E475D;
+      }
+
+      .content-table {
+          border-collapse: collapse;
+          margin: 25px 0;
+          font-size: 0.9em;
+          min-width: 400px;
+          border-radius: 5px 5px 0 0;
+          overflow: hidden;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .content-table thead tr {
+          background-color: #12b3c9;
+          color: #ffffff;
+          text-align: left;
+          font-weight: bold;
+      }
+
+      .content-table th,
+      .content-table td {
+          padding: 12px 15px;
+      }
+
+      .content-table tbody tr {   
+          border-bottom: 1px solid #dddddd;
+      }
+
+      .content-table tbody tr:nth-of-type(even) {
+          background-color: #f3f3f3;
+      }
+
+      .content-table tbody tr:last-of-type {
+          border-bottom: 2px solid #05c7c7;
+      }
+
+      .content-table tbody tr.active-row {
+          font-weight: bold;
+          color: rgba(189, 26, 26, 0.021);
+      }
+
+      /* .attendance-btn {
+          display: flex;
+          justify-content: center;
+      }
+
+      .attendance-btn button {
+          margin: 5px;
+          padding: 5px 10px;
+      }
+
+      .attendance-btn .present-btn {
+          background-color: #22cc3f;
+          color: #ffffff;
+      }
+
+      .attendance-btn .absent-btn {
+          background-color: #f90808ce;
+          color: #ffffff;
+      }
+
+      .center-button {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+      } */
+
+      /* button {
+        
+          padding: 1.3em 3em;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 2.5px;
+          font-weight: 500;
+          color: #000;
+          background-color: #fff;
+          border: none;
+          border-radius: 45px;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease 0s;
+          cursor: pointer;
+          outline: none;
+      }
+
+      button:hover {
+          background-color: #23c483;
+          box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+          color: #fff;
+          transform: translateY(-7px);
+      }
+
+      button:active {
+          transform: translateY(-1px);
+      } */
+
+      a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>RollNumber</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Akthar Husan</td>
+                    <td>20064C04002</td>
+                    <td>
+                        <!-- P A student button -->
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Anandita Pathak</td>
+                    <td>20064C04004</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Anubhuti Khare</td>
+                    <td>20064C04006</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ashutosh Sharma</td>
+                    <td>20064C04007</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Hareram Pathak</td>
+                    <td>20064C04010</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Jeetendra Barman</td>
+                    <td>20064C04011</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Shashank Vajpayee</td>
+                    <td>20064C04016</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Shivansh Shrivastava</td>
+                    <td>20064C04019</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Shriyash Pathak</td>
+                    <td>20064C04020</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Swati Pathak </td>
+                    <td>20064C04021</td>
+                    <td>
+                        <label class="checkbox">
+                            <input type="checkbox" name="attendance" value="present">
+                            <span class="checkmark"></span>
+                            <span class="label">Present</span>
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="attendance-btn">
+            <button>Submit</button>
+        </div>
+    </div>
+    <!-- <a href="#" class="previous">&laquo; Previous</a> -->
+    <a href="#" class="previous" onclick="history.go(-1)">&laquo; Previous</a>
+
+
+<!-- <a href="#" class="next">Next &raquo;</a>
+
+<a href="#" class="previous round">&#8249;</a>
+<a href="#" class="next round">&#8250;</a> -->
+
+</body>
+</html>

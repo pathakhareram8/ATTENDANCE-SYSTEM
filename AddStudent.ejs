@@ -1,0 +1,335 @@
+
+<html>
+  <style>
+  
+    /* {
+      box-sizing: border-box;
+    } */
+    
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #666666;
+      background: white;
+    }
+    
+    .wrapper {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1140px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: flex;
+      background: white;
+      box-shadow: 0 0 5px #999999;
+    }
+    
+    .credit {
+      position: relative;
+      margin: 25px auto 0 auto;
+      width: 100%;
+      text-align: center;
+      color: #666666;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    
+    .credit a {
+      color: #222222;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    
+    .col-left,
+    .col-right {
+      padding: 30px;
+      display: flex;
+    }
+    
+    .col-left {
+      width: 60%;
+      -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+      clip-path: polygon(0 0, 0% 100%, 100% 0);
+      background: rgb(0, 110, 255);
+    }
+    
+    .col-right {
+      padding: 60px 30px;
+      width: 50%;
+      margin-left: -10%;
+    }
+    
+    @media(max-width: 575.98px) {
+      .container {
+        flex-direction: column;
+        box-shadow: none;
+      }
+    
+      .col-left,
+      .col-right {
+        width: 100%;
+        margin: 0;
+        -webkit-clip-path: none;
+        clip-path: none;
+      }
+    
+      .col-right {
+        padding: 30px;
+      }
+    }
+    
+    .login-text {
+      position: relative;
+      width: 100%;
+      color: #ffffff;
+    }
+    
+    .login-text h2 {
+      margin: 0 0 15px 0;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    
+    .login-text p {
+      margin: 0 0 20px 0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+    
+    .login-text .btn {
+      display: inline-block;
+      padding: 7px 20px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-radius: 30px;
+      color: #ffffff;
+      outline: none;
+      border: 1px solid #ffffff;
+      box-shadow: inset 0 0 0 0 #ffffff;
+      transition: .3s;
+      -webkit-transition: .3s;
+    }
+    
+    .login-text .btn:hover {
+      color: #44c7f5;
+      box-shadow: inset 150px 0 0 0 #ffffff;
+    }
+    
+    .login-form {
+      position: relative;
+      width: 100%;
+    }
+    
+    .login-form h2 {
+      margin: 0 0 15px 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    
+    .login-form p {
+      margin: 0 0 10px 0;
+      text-align: left;
+      color: #666666;
+      font-size: 15px;
+    }
+    
+    .login-form p:last-child {
+      margin: 0;
+      padding-top: 3px;
+    }
+    
+    
+    
+    .login-form label {
+      display: block;
+      width: 100%;
+      margin-bottom: 2px;
+      letter-spacing: .5px;
+    }
+    
+    .login-form p:last-child label {
+      width: 60%;
+      float: left;
+    }
+    
+    .login-form label span {
+      color: #ff574e;
+      padding-left: 2px;
+    }
+    
+    .login-form input {
+      display: block;
+      width: 100%;
+      height: 35px;
+      padding: 0 10px;
+      outline: none;
+      border: 1px solid #cccccc;
+      border-radius: 30px;
+    }
+    
+    .login-form input:focus {
+      border-color: darkblue;
+    }
+    
+    .login-form button,
+    .login-form input[type=submit] {
+      display: inline-block;
+      width: 100%;
+      margin-top: 5px;
+      color: #44c7f5;
+      font-size: 16px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid #44c7f5;
+      border-radius: 30px;
+      box-shadow: inset 0 0 0 0 #44c7f5;
+      transition: .3s;
+      -webkit-transition: .3s;
+    }
+    
+    .login-form button:hover,
+    .login-form input[type=submit]:hover {
+      color: #ffffff;
+      box-shadow: inset 250px 0 0 0 #44c7f5;
+    }
+
+    a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+    </style>
+<body>
+<div class="wrapper">
+  <div class="container">
+    <div class="col-left">
+      <div class="login-text">
+        <h2>Attendance Management System</h2>
+        <p>welcome</p>
+        <!-- <a class="btn" href="">RECORD</a> -->
+      </div>
+    </div>
+    <div class="col-right">
+      <div class="login-form">
+        <h2>ADD STUDENT</h2>
+        <form  method="POST" id="New_Student" action="/api/users">
+          <p>
+            <label>NAME<span>*</span></label>
+            <input type="text" placeholder="NAME" required name="name" >
+          </p>
+
+          <p>
+            <label>RollNumber<span>*</span></label>
+            <input type="text"   placeholder="RollNumber"  minlength="10" required maxlength="11" name="rollnumber"> 
+          </p>
+          
+          <p>
+            <label>Father Name<span>*</span></label>
+            <input type="text" placeholder="FatherName"required name="fathername">
+          </p>
+
+          
+          <p>
+            <label>Date of birth<span>*</span></label>
+            <input type="text"   placeholder="DOB"  minlength="" required maxlength="10" name="dateofbirth">
+          </p>
+          <p>
+            <label>category<span>*</span></label>
+            <input type="text"   placeholder="category"   required maxlength="10" name="category"> 
+          </p>
+
+          <p>
+            <label>Gender<span>*</span></label>
+            <input type="text"   placeholder="Gender"  minlength="3" required maxlength="10" name="gender"> 
+          </p>
+          <p>
+            <label>Branch<span>*</span></label>
+            <input type="text"   placeholder="Branch"  minlength="1" required maxlength="10" name="branch">
+          </p>
+          
+          <p>
+            <label>Semester<span>*</span></label>
+            <input type="number"   placeholder="Semester"  minlength="1" required maxlength="1" name="semester">
+          </p>
+
+          
+          
+          <p>
+            <label>E-MAIL<span>*</span></label>
+            <input type="email" placeholder="E-MAIL" required name="email">
+          </p>
+          <p>
+            <label>Phone number<span>*</span></label>
+            <input type="number"   placeholder="PhoneNumber"  minlength="10" required maxlength="10" name="number">
+          </p>
+          <p>
+            <label>ADDRESS<span>*</span></label>
+            <input type="text" placeholder="ADDRESS" required name="address">
+          </p>
+
+          
+          <p>
+            <input type="submit" value="ADD" />
+          </p>
+          <p>
+            <a href=""></a> 
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <a href="#" class="previous">&laquo; Previous</a> -->
+  <a href="#" class="previous" onclick="history.go(-1)">&laquo; Previous</a>
+<!-- <a href="#" class="next">Next &raquo;</a>
+
+<a href="#" class="previous round">&#8249;</a>
+<a href="#" class="next round">&#8250;</a> -->
+  <!-- <div class="credit">
+    Designed by <a>shriyash pathak</a>
+  </div>
+</div> -->
+<!-- <script>'app.js'</script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  $("#New_Student").submit(function(event){
+    alert("data inserted successfully!");
+  })
+</script>
+</body>
+
+</html>
